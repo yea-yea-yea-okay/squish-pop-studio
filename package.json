@@ -1,0 +1,18 @@
+{
+  "name": "squish-pop-studio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Squish Pop Studio - a small squishy toy storefront powered by Netlify and Stripe Checkout",
+  "dependencies": {
+    "stripe": "^18.5.0",
+    "@netlify/blobs": "^10.0.0"
+  },
+  "scripts": {
+    "check": "node --check public/assets/app.js && for f in netlify/functions/*.mjs; do node --check \"$f\" || exit 1; done && npm test",
+    "test": "node --test tests/*.test.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
